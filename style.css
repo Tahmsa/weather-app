@@ -1,3 +1,69 @@
- h1 {
-            text-align: center;
-        }
+body {
+  font-family: "Playfair Display", serif;
+}
+
+h1 {
+  text-align: center;
+  font-size: 60px;
+  margin-top: 20px;
+}
+h2 {
+  text-align: center;
+  font-size: 60px;
+  font-weight: 600;
+  margin-top: 1%;
+}
+h3 {
+  font-size: 25px;
+  text-align: center;
+  margin-bottom: 5%;
+}
+a,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+
+.rainh1 {
+  width: 110px;
+  margin-top: 20px;
+}
+
+.col {
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+}
+.rain {
+  width: 40px;
+}
+.temperature {
+  font-weight: 500;
+  font-size: 90px;
+}
+.temp {
+  font-weight: 500;
+  font-size: 25px;
+}
+.temperature2 {
+  font-weight: 500;
+  font-size: 25px;
+}
+.units {
+  font-weight: 500;
+  font-size: 50px;
+}
+.description {
+  font-size: 25px;
+  text-align: center;
+}
+.precipitation {
+  font-size: 18px;
+  list-style: none;
+  padding: 20px;
+  position: fixed;
+  top: 11%;
+  right: 2%;
+}

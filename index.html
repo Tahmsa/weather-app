@@ -1,22 +1,170 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <h1>
-        Hello Git
-    </h1>
-    <form>
-        <input type="text" placeholder="Enter your email" />
-        <input type="password" placeholder="Enter your password" />
-        <input type="submit" value="Login" />
-    </form>
-    <script scr="script.js"></script>
-    </script>
-</body>
+<html>
+  <head>
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link href="src/style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/010/533/original/iconfinder_110820_rain_icon_512px.png?1623429064"
+          alt="rainicon"
+          class="rainh1"
+        />
+        <span class="temperature" id="temperature"></span
+        ><span class="units">°C</span>
+        <div class="description" id="description"></div>
+      </h1>
+      <h2 id="city"></h2>
+      <h3 id="date"></h3>
+      <ul class="precipitation">
+        <li>Precipitation: 93%</li>
+        <li>Humidity: <span id="humidity"></span>%</li>
+        <li>Wind: <span id="wind"></span> km/h</li>
+      </ul>
+
+      <div class="row">
+        <div class="col">
+          16:00
+          <br />
+          <img
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/010/546/original/iconfinder_494776_rain_weather_cloud_forecast_icon_512px.png?1623430784"
+            alt="rainicon"
+            class="rain"
+          />
+          <div class="temp">15°C</div>
+        </div>
+        <div class="col">
+          17:00
+          <br />
+          <img
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/010/546/original/iconfinder_494776_rain_weather_cloud_forecast_icon_512px.png?1623430784"
+            alt="rainicon"
+            class="rain"
+          />
+          <div class="temp">15°C</div>
+        </div>
+        <div class="col">
+          18:00
+          <br />
+          <img
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/010/546/original/iconfinder_494776_rain_weather_cloud_forecast_icon_512px.png?1623430784"
+            alt="rainicon"
+            class="rain"
+          />
+          <div class="temp">15°C</div>
+        </div>
+        <div class="col">
+          19:00
+          <br />
+          <img
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/010/546/original/iconfinder_494776_rain_weather_cloud_forecast_icon_512px.png?1623430784"
+            alt="rainicon"
+            class="rain"
+          />
+          <div class="temp">15°C</div>
+        </div>
+      </div>
+      <hr />
+      <div class="row">
+        <div class="col">
+          Sat
+          <br />
+          <img
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/010/546/original/iconfinder_494776_rain_weather_cloud_forecast_icon_512px.png?1623430784"
+            alt="rainicon"
+            class="rain"
+          />
+          <div class="temperature2">20°C</div>
+        </div>
+        <div class="col">
+          Sun
+          <br />
+          <img
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/010/549/original/iconfinder_494778_weather_cloud_rain_sun_day_icon_512px.png?1623430945"
+            alt="rainicon"
+            class="rain"
+          />
+          <div class="temperature2">21°C</div>
+        </div>
+        <div class="col">
+          Mon
+          <br />
+          <img
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/010/546/original/iconfinder_494776_rain_weather_cloud_forecast_icon_512px.png?1623430784"
+            alt="rainicon"
+            class="rain"
+          />
+          <div class="temperature2">20°C</div>
+        </div>
+        <div class="col">
+          Tue
+          <br />
+          <img
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/010/549/original/iconfinder_494778_weather_cloud_rain_sun_day_icon_512px.png?1623430945"
+            alt="rainicon"
+            class="rain"
+          />
+          <div class="temperature2">19°C</div>
+        </div>
+        <div class="col">
+          Wed
+          <br />
+          <img
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/010/550/original/iconfinder_494765_weather_cloud_daylight_forecast_sun_icon_512px.png?1623431063"
+            alt="rainicon"
+            class="rain"
+          />
+          <div class="temperature2">23°C</div>
+        </div>
+      </div>
+      <hr />
+      <form class="search-form" id="search-form">
+        <div class="row">
+          <div class="col-6">
+            <input
+              type="search"
+              placeholder="Type a city.."
+              autofocus="on"
+              autocomplete="off"
+              id="city-input"
+              class="form-control shadow-sm"
+            />
+          </div>
+          <div class="col-3">
+            <input
+              type="submit"
+              value="Search"
+              class="form-control btn btn-outline-secondary shadow-sm"
+            />
+          </div>
+          <div class="col-3">
+            <button
+              class="btn btn-outline-secondary w-100"
+              id="current-location-button"
+            >
+              Current
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <script src="src/script.js"></script>
+  </body>
 </html>
